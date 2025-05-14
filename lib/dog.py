@@ -10,12 +10,10 @@ class Dog:
 
     @property
     def name(self):
-        """The name property"""
         return self._name
 
     @name.setter
     def name(self, name):
-        """Name must be a string between 1 and 25 characters in length"""
         if isinstance(name, str) and 1 <= len(name) <= 25:
             self._name = name
         else:
@@ -23,12 +21,10 @@ class Dog:
 
     @property
     def breed(self):
-        """The breed property"""
         return self._breed
 
     @breed.setter
     def breed(self, breed):
-        """Breed must be in the list of approved breeds"""
         if breed in APPROVED_BREEDS:
             self._breed = breed
         else:
